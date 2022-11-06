@@ -9,8 +9,8 @@ CREATE TABLE projeto (
 	id_projeto INT PRIMARY KEY,
 	nome VARCHAR(67),
 	orçamento NUMERIC(11,2) NOT NULL CHECK (orçamento > 0),
-	data_de_início DATE NOT NULL,
-	previsão_de_conclusão DATE,
+	data_início DATE NOT NULL,
+	previsão_conclusão DATE,
 	id_departamento INT REFERENCES departamento(id_departamento) NOT NULL
 );
 
@@ -26,7 +26,7 @@ CREATE TABLE candidato (
 CREATE TABLE empregado (
 	matrícula INT PRIMARY KEY,
 	nome VARCHAR(67) NOT NULL,
-	data_de_nascimento DATE NOT NULL,
+	data_nascimento DATE NOT NULL,
 	salário NUMERIC(8,2) NOT NULL CHECK (salário > 0),
 	sexo CHAR(1) CHECK (sexo in ('M', 'F')),
 	uf CHAR(2) NOT NULL,
