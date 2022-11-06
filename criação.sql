@@ -1,8 +1,7 @@
--- Ainda falta um check nessa merda
 CREATE TABLE departamento (
 	id_departamento INT PRIMARY KEY CHECK (id_departamento > 0),
   	nome VARCHAR(67) NOT NULL,
-	localização VARCHAR(67)  	
+	localização VARCHAR(67) CHECK (localização LIKE 'andar: %, bloco: %')	
 );
 
 CREATE TABLE projeto (
