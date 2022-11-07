@@ -39,7 +39,7 @@ CREATE TABLE empregado (
 );
 
 -- Criação da tabela Gratificação
-CREATE TABLE "gratifição" (
+CREATE TABLE "gratificação" (
 	código INT PRIMARY KEY CHECK (código > 0),
 	atividade VARCHAR(67),
 	valor NUMERIC(8,2)  NOT NULL CHECK (valor > 0)
@@ -50,7 +50,7 @@ CREATE TABLE recrutamento_empregado (
 	matrícula INT REFERENCES empregado(matrícula),
 	id_projeto INT REFERENCES projeto(id_projeto),
 	horas_trabalhadas INT NOT NULL CHECK (horas_trabalhadas >= 0),
-	código_gratificação INT REFERENCES "gratifição"(código),
+	código_gratificação INT REFERENCES "gratificação"(código),
 	PRIMARY KEY (matrícula, id_projeto)
 );
 
