@@ -8,6 +8,16 @@ INSERT INTO departamento VALUES (6, 'Equipe de Contratação');
 INSERT INTO departamento VALUES (7, 'Segunda Equipe de Entrevista', 'andar: segundo, bloco: sexto');
 INSERT INTO departamento VALUES (8, 'Almoxarifado', 'andar: primeiro, bloco: sétimo');
 
+-- Inserção de dados na tabela Projeto
+INSERT INTO projeto VALUES (1, NULL, 100000.00, '2022-12-23', '2024-12-23', 3);
+INSERT INTO projeto VALUES (2, 'ENTREVISTADOR DE LENDAS' , 5000000.00, '2020-07-12', NULL, 3);
+INSERT INTO projeto VALUES (3, NULL, 50000.00, '2002-05-17', NULL, 7);
+INSERT INTO projeto VALUES (4, 'ZELADORES UNIDOS JAMAIS SERAM VARRIDOS', 20000.00, '2019-12-23', NULL, 8);
+INSERT INTO projeto VALUES (5, 'TESOURA AFIADA, DINHEIRO NO CAIXA', 1000000.00, '2010-06-12', NULL, 5);
+INSERT INTO projeto VALUES (6, NULL, 100000.00, '2022-09-11', NULL, 2);
+INSERT INTO projeto VALUES (7, NULL, 10000.00, '2022-11-02', '2022-11-22', 8);
+INSERT INTO projeto VALUES (8, 'Recursos humanos', 100000.00, '2020-04-01', NULL, 1);
+
 -- Inserção de dados na tabela Candidato
 INSERT INTO candidato VALUES (12345678901, 'Julia da Silva Cruz Medeiros', 'Avaliadora de Candidatos Sênior', NULL, 83999999999, 81956499325);
 INSERT INTO candidato VALUES (23456789012, 'André Nunes de França', NULL, 10000.00, 1187563429, NULL);
@@ -38,5 +48,14 @@ INSERT INTO empregado VALUES (45, 'Simone Araújo do Amaral', '1975-05-20', 1500
 INSERT INTO empregado VALUES (190, 'João Nunes Marcos', '2001-07-23', 1000.67, 'M', 'RO', NULL, NULL, 4);
 INSERT INTO empregado VALUES (911, 'Sonia Abravanel Sales de Freitas Nunes Gomes Santana', '1965-03-25', 7850.90, 'F', 'RJ', 'Rua Cefalópodes Antunes', 900, 2);
 
+-- Inserção de dados na tabela Recrutamento-Empregado
+INSERT INTO recrutamento_empregado VALUES (13, ); 
+INSERT INTO recrutamento_empregado VALUES (); 
+INSERT INTO recrutamento_empregado VALUES (); 
+INSERT INTO recrutamento_empregado VALUES (); 
+INSERT INTO recrutamento_empregado VALUES (); 
+INSERT INTO recrutamento_empregado VALUES (); 
+INSERT INTO recrutamento_empregado VALUES (); 
+INSERT INTO recrutamento_empregado VALUES (); 
 -- INSERT INTO * VALUES (); 
 -- date -> ('yyyy-mm-dd') sem os parenteses, logicamente
