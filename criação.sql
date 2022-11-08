@@ -1,11 +1,18 @@
+-----------------------------------------------------------------
 -- Criação da tabela Departamento
+-----------------------------------------------------------------
+
 CREATE TABLE departamento (
 	id_departamento INT PRIMARY KEY CHECK (id_departamento > 0),
   	nome VARCHAR(67) NOT NULL,
 	localização VARCHAR(67) CHECK (localização LIKE 'andar: %, bloco: %')	
 );
+-----------------------------------------------------------------
 
+-----------------------------------------------------------------
 -- Criação da tabela Projeto
+-----------------------------------------------------------------
+
 CREATE TABLE projeto (
 	id_projeto INT PRIMARY KEY,
 	nome VARCHAR(67),
@@ -14,8 +21,12 @@ CREATE TABLE projeto (
 	previsão_conclusão DATE,
 	id_departamento INT REFERENCES departamento(id_departamento) NOT NULL
 );
+-----------------------------------------------------------------
 
+-----------------------------------------------------------------
 -- Criação da tabela Candidato
+-----------------------------------------------------------------
+
 CREATE TABLE candidato (
 	cpf BIGINT PRIMARY KEY CHECK (cpf > 0 AND cpf < 99999999999),
 	nome VARCHAR(67) NOT NULL,
@@ -24,8 +35,12 @@ CREATE TABLE candidato (
 	telefone1 BIGINT NOT NULL,
 	telefone2 BIGINT
 );
+-----------------------------------------------------------------
 
+-----------------------------------------------------------------
 -- Criação da tabela Empregado
+-----------------------------------------------------------------
+
 CREATE TABLE empregado (
 	matrícula INT PRIMARY KEY,
 	nome VARCHAR(67) NOT NULL,
@@ -37,15 +52,23 @@ CREATE TABLE empregado (
 	número INT,
 	id_departamento INT REFERENCES departamento(id_departamento) NOT NULL	
 );
+-----------------------------------------------------------------
 
+-----------------------------------------------------------------
 -- Criação da tabela Gratificação
+-----------------------------------------------------------------
+
 CREATE TABLE "gratificação" (
 	código INT PRIMARY KEY CHECK (código > 0),
 	atividade VARCHAR(67),
 	valor NUMERIC(8,2)  NOT NULL CHECK (valor > 0)
 );
+-----------------------------------------------------------------
 
+-----------------------------------------------------------------
 -- Criação da tabela Projeto_Gratificação
+-----------------------------------------------------------------
+
 CREATE TABLE recrutamento_empregado (
 	matrícula INT REFERENCES empregado(matrícula),
 	id_projeto INT REFERENCES projeto(id_projeto),
@@ -53,8 +76,12 @@ CREATE TABLE recrutamento_empregado (
 	código_gratificação INT REFERENCES "gratificação"(código),
 	PRIMARY KEY (matrícula, id_projeto)
 );
+-----------------------------------------------------------------
 
+-----------------------------------------------------------------
 -- Criação da tabela Projeto_Candidato
+-----------------------------------------------------------------
+
 CREATE TABLE projeto_candidato (
 	id_projeto INT REFERENCES projeto(id_projeto),
 	cpf BIGINT REFERENCES candidato(cpf),
@@ -62,3 +89,4 @@ CREATE TABLE projeto_candidato (
 	contratação BOOLEAN NOT NULL,
 	PRIMARY KEY (id_projeto, cpf)
 );
+-----------------------------------------------------------------

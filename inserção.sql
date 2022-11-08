@@ -84,23 +84,12 @@ INSERT INTO recrutamento_empregado VALUES (190, 2, 78, 8);
 -----------------------------------------------------------------
 -- Inserção de dados na tabela Recrutamento-Candidato           
 -----------------------------------------------------------------
-INSERT INTO projeto_candidato VALUES (1, 23456789012, '2022-03-12', yes);
-INSERT INTO projeto_candidato VALUES (8, 89012345678, '2020-10-02', no);
-INSERT INTO projeto_candidato VALUES (7, 89012345678, '', yes);
-INSERT INTO projeto_candidato VALUES (3, 56789012345, '', no);
-INSERT INTO projeto_candidato VALUES (4, 12345678901, '', yes);
-INSERT INTO projeto_candidato VALUES (1, 67890123456, '', no);
-INSERT INTO projeto_candidato VALUES (5, 78901234567, '', yes);
-INSERT INTO projeto_candidato VALUES (7, 56789012345, '', yes);
+INSERT INTO projeto_candidato VALUES (1, 23456789012, '2023-03-12', true);
+INSERT INTO projeto_candidato VALUES (8, 89012345678, '2020-10-02', false);
+INSERT INTO projeto_candidato VALUES (7, 89012345678, '2022-11-11', true);
+INSERT INTO projeto_candidato VALUES (3, 56789012345, '2007-02-27', false);
+INSERT INTO projeto_candidato VALUES (4, 12345678901, '2022-02-22', true);
+INSERT INTO projeto_candidato VALUES (1, 67890123456, '2023-09-15', false);
+INSERT INTO projeto_candidato VALUES (5, 78901234567, '2011-05-18', true);
+INSERT INTO projeto_candidato VALUES (7, 56789012345, '2022-11-13', true);
 -----------------------------------------------------------------
-
--- date -> ('yyyy-mm-dd') sem os parenteses, logicamente
-/*
-CREATE TABLE projeto_candidato (
-	id_projeto INT REFERENCES projeto(id_projeto),
-	cpf BIGINT REFERENCES candidato(cpf),
-	data_entrevista DATE,
-	contratação BOOLEAN NOT NULL,
-	PRIMARY KEY (id_projeto, cpf)
-);
-*/
