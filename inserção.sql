@@ -68,7 +68,7 @@ INSERT INTO empregado VALUES (911, 'Sonia Abravanel Sales de Freitas Nunes Gomes
 ----------------------------------------------------------------- 
 
 -----------------------------------------------------------------
--- Inserção de dados na tabela Recrutamento-Empregado
+-- Inserção de dados na tabela Recrutamento-Empregado           
 -----------------------------------------------------------------
 
 INSERT INTO recrutamento_empregado VALUES (22, 1, 10, 6); 
@@ -81,14 +81,26 @@ INSERT INTO recrutamento_empregado VALUES (762, 3, 67, 5);
 INSERT INTO recrutamento_empregado VALUES (190, 2, 78, 8); 
 -----------------------------------------------------------------
 
--- INSERT INTO * VALUES (); 
+-----------------------------------------------------------------
+-- Inserção de dados na tabela Recrutamento-Candidato           
+-----------------------------------------------------------------
+INSERT INTO projeto_candidato VALUES (1, 23456789012, '2022-03-12', yes);
+INSERT INTO projeto_candidato VALUES (8, 89012345678, '2020-10-02', no);
+INSERT INTO projeto_candidato VALUES (7, 89012345678, '', yes);
+INSERT INTO projeto_candidato VALUES (3, 56789012345, '', no);
+INSERT INTO projeto_candidato VALUES (4, 12345678901, '', yes);
+INSERT INTO projeto_candidato VALUES (1, 67890123456, '', no);
+INSERT INTO projeto_candidato VALUES (5, 78901234567, '', yes);
+INSERT INTO projeto_candidato VALUES (7, 56789012345, '', yes);
+-----------------------------------------------------------------
+
 -- date -> ('yyyy-mm-dd') sem os parenteses, logicamente
 /*
-CREATE TABLE recrutamento_empregado (
-	matrícula INT REFERENCES empregado(matrícula),
+CREATE TABLE projeto_candidato (
 	id_projeto INT REFERENCES projeto(id_projeto),
-	horas_trabalhadas INT NOT NULL CHECK (horas_trabalhadas >= 0),
-	código_gratificação INT REFERENCES "gratificação"(código),
-	PRIMARY KEY (matrícula, id_projeto)
+	cpf BIGINT REFERENCES candidato(cpf),
+	data_entrevista DATE,
+	contratação BOOLEAN NOT NULL,
+	PRIMARY KEY (id_projeto, cpf)
 );
 */
