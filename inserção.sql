@@ -48,8 +48,18 @@ INSERT INTO empregado VALUES (45, 'Simone Araújo do Amaral', '1975-05-20', 1500
 INSERT INTO empregado VALUES (190, 'João Nunes Marcos', '2001-07-23', 1000.67, 'M', 'RO', NULL, NULL, 4);
 INSERT INTO empregado VALUES (911, 'Sonia Abravanel Sales de Freitas Nunes Gomes Santana', '1965-03-25', 7850.90, 'F', 'RJ', 'Rua Cefalópodes Antunes', 900, 2);
 
+/*
+CREATE TABLE recrutamento_empregado (
+	matrícula INT REFERENCES empregado(matrícula),
+	id_projeto INT REFERENCES projeto(id_projeto),
+	horas_trabalhadas INT NOT NULL CHECK (horas_trabalhadas >= 0),
+	código_gratificação INT REFERENCES "gratificação"(código),
+	PRIMARY KEY (matrícula, id_projeto)
+);
+*/
+
 -- Inserção de dados na tabela Recrutamento-Empregado
-INSERT INTO recrutamento_empregado VALUES (13, ); 
+INSERT INTO recrutamento_empregado VALUES (22, 1, 10, 6); 
 INSERT INTO recrutamento_empregado VALUES (); 
 INSERT INTO recrutamento_empregado VALUES (); 
 INSERT INTO recrutamento_empregado VALUES (); 
