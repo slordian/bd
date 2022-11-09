@@ -9,9 +9,10 @@ INSERT INTO departamento VALUES (5, 'Tesouraria', 'andar: quinto, bloco: nono');
 INSERT INTO departamento VALUES (6, 'Equipe de Contratação');
 INSERT INTO departamento VALUES (7, 'Segunda Equipe de Entrevista', 'andar: segundo, bloco: sexto');
 INSERT INTO departamento VALUES (8, 'Almoxarifado', 'andar: primeiro, bloco: sétimo');
+
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
-
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
 -----------------------------------------------------------------
 -- Inserção de dados na tabela Projeto
 -----------------------------------------------------------------
@@ -24,9 +25,10 @@ INSERT INTO projeto VALUES (5, 'TESOURA AFIADA, DINHEIRO NO CAIXA', 1000000.00, 
 INSERT INTO projeto VALUES (6, NULL, 100000.00, '2022-09-11', NULL, 2);
 INSERT INTO projeto VALUES (7, NULL, 10000.00, '2022-11-02', '2022-11-22', 8);
 INSERT INTO projeto VALUES (8, 'Recursos humanos', 100000.00, '2020-04-01', NULL, 1);
+
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
-
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
 -----------------------------------------------------------------
 -- Inserção de dados na tabela Candidato
 -----------------------------------------------------------------
@@ -39,9 +41,10 @@ INSERT INTO candidato VALUES (56789012345, 'Gérson Davi Sérgio Cordeiro Alenca
 INSERT INTO candidato VALUES (67890123456, 'Gabriel Pontes Valeriano', NULL, NULL, 81994529312, 99986550463);
 INSERT INTO candidato VALUES (78901234567, 'Maria Eduarda Nascimento Henriques', 'Gestora de Gastos', 55000.00, 83952318096, NULL);
 INSERT INTO candidato VALUES (89012345678, 'Arthur Felipe Araújo da Silva', NULL, 31415.92, 1134561234, NULL);
+
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
-
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
 -----------------------------------------------------------------
 -- Inserção de dados na tabela Gratificação
 -----------------------------------------------------------------
@@ -54,9 +57,10 @@ INSERT INTO "gratificação" VALUES (5, 'Hora Extra', 150.00);
 INSERT INTO "gratificação" VALUES (6, NULL, 5000.00);
 INSERT INTO "gratificação" VALUES (7, NULL, 322.00);
 INSERT INTO "gratificação" VALUES (8, 'Entrevistador', 450.00);
+
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
-
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
 -----------------------------------------------------------------
 -- Inserção de dados na tabela Empregado
 -----------------------------------------------------------------
@@ -69,9 +73,10 @@ INSERT INTO empregado VALUES (39, 'Rayssa Fagundes de Sá', '2002-02-02', 50000.
 INSERT INTO empregado VALUES (45, 'Simone Araújo do Amaral', '1975-05-20', 1500.00, 'F', 'GO', 'Rua Doutora Hermione Granger', 310, 5);
 INSERT INTO empregado VALUES (190, 'João Nunes Marcos', '2001-07-23', 1000.67, 'M', 'RO', NULL, NULL, 4);
 INSERT INTO empregado VALUES (911, 'Sonia Abravanel Sales de Freitas Nunes Gomes Santana', '1965-03-25', 7850.90, 'F', 'RJ', 'Rua Cefalópodes Antunes', 900, 2);
------------------------------------------------------------------ 
------------------------------------------------------------------ 
 
+----------------------------------------------------------------- 
+----------------------------------------------------------------- 
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
 -----------------------------------------------------------------
 -- Inserção de dados na tabela Recrutamento-Empregado           
 -----------------------------------------------------------------
@@ -85,12 +90,14 @@ INSERT INTO recrutamento_empregado VALUES (911, 7, 23, 8);
 INSERT INTO recrutamento_empregado VALUES (13, 2, 45, 6); 
 INSERT INTO recrutamento_empregado VALUES (762, 3, 67, 5); 
 INSERT INTO recrutamento_empregado VALUES (190, 2, 78, 8); 
------------------------------------------------------------------
------------------------------------------------------------------
 
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
 -----------------------------------------------------------------
 -- Inserção de dados na tabela Recrutamento-Candidato           
 -----------------------------------------------------------------
+
 INSERT INTO projeto_candidato VALUES (1, 23456789012, '2023-03-12', true);
 INSERT INTO projeto_candidato VALUES (8, 89012345678, '2020-10-02', false);
 INSERT INTO projeto_candidato VALUES (7, 89012345678, '2022-11-11', true);
@@ -99,5 +106,6 @@ INSERT INTO projeto_candidato VALUES (4, 12345678901, '2022-02-22', true);
 INSERT INTO projeto_candidato VALUES (1, 67890123456, '2023-09-15', false);
 INSERT INTO projeto_candidato VALUES (5, 78901234567, '2011-05-18', true);
 INSERT INTO projeto_candidato VALUES (7, 56789012345, '2022-11-13', true);
+
 -----------------------------------------------------------------
 -----------------------------------------------------------------
