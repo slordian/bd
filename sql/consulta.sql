@@ -12,10 +12,6 @@ SELECT * FROM candidato WHERE cargo_pretendido IS NULL;
 -----------------------------------------------------------------
 -----------------------------------------------------------------
 
------------------------------------------------------------------
--- Consulta usando IN 
------------------------------------------------------------------
-
 -- Enunciado: Mostre as informações dos empregados que moram em São Paulo, Santa Catarina e Rondônia
 
 SELECT * FROM empregado WHERE uf IN ('SP', 'SC', 'RO');
@@ -23,19 +19,11 @@ SELECT * FROM empregado WHERE uf IN ('SP', 'SC', 'RO');
 -----------------------------------------------------------------
 -----------------------------------------------------------------
 
------------------------------------------------------------------
--- Consulta usando LIKE
------------------------------------------------------------------
-
 -- Enunciado: Mostre as linhas da tabela de gratificações onde a atividade contiver Ajudante
 
 SELECT * FROM "gratificação" WHERE atividade LIKE 'Ajudante %';
 
 -----------------------------------------------------------------
------------------------------------------------------------------
-
------------------------------------------------------------------
--- Consulta usando ORDER BY
 -----------------------------------------------------------------
 
 -- Enunciado: Mostre a tabela dos projetos da linha com menor orçamento para a linha com maior orçamento
