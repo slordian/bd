@@ -21,7 +21,7 @@ SELECT * FROM empregado WHERE uf IN ('SP', 'SC', 'RO');
 
 -- Enunciado: Mostre as linhas da tabela de gratificações onde a atividade contiver Ajudante
 
-SELECT * FROM "gratificação" WHERE atividade LIKE 'Ajudante %';
+SELECT * FROM gratificacao WHERE atividade LIKE 'Ajudante %';
 
 -----------------------------------------------------------------
 -----------------------------------------------------------------

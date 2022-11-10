@@ -10,7 +10,7 @@ CREATE TABLE departamento (
 
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
--- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
+
 -----------------------------------------------------------------
 -- Criação da tabela Projeto
 -----------------------------------------------------------------
@@ -26,7 +26,7 @@ CREATE TABLE projeto (
 
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
--- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
+
 -----------------------------------------------------------------
 -- Criação da tabela Candidato
 -----------------------------------------------------------------
@@ -42,7 +42,7 @@ CREATE TABLE candidato (
 
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
--- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
+
 -----------------------------------------------------------------
 -- Criação da tabela Empregado
 -----------------------------------------------------------------
@@ -61,12 +61,12 @@ CREATE TABLE empregado (
 
 ----------------------------------------------------------------- 
 -----------------------------------------------------------------
--- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
+
 -----------------------------------------------------------------
 -- Criação da tabela Gratificação
 -----------------------------------------------------------------
 
-CREATE TABLE "gratificação" (
+CREATE TABLE gratificacao (
 	código INT PRIMARY KEY CHECK (código > 0),
 	atividade VARCHAR(67),
 	valor NUMERIC(8,2)  NOT NULL CHECK (valor > 0)
@@ -74,7 +74,7 @@ CREATE TABLE "gratificação" (
 
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
--- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
+
 -----------------------------------------------------------------
 -- Criação da tabela Projeto_Gratificação
 -----------------------------------------------------------------
@@ -83,13 +83,13 @@ CREATE TABLE recrutamento_empregado (
 	matrícula INT REFERENCES empregado(matrícula),
 	id_projeto INT REFERENCES projeto(id_projeto),
 	horas_trabalhadas INT NOT NULL CHECK (horas_trabalhadas >= 0),
-	código_gratificação INT REFERENCES "gratificação"(código),
+	código_gratificação INT REFERENCES gratificacao(código),
 	PRIMARY KEY (matrícula, id_projeto)
 );
 
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
--- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --
+
 -----------------------------------------------------------------
 -- Criação da tabela Projeto_Candidato
 -----------------------------------------------------------------

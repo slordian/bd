@@ -49,14 +49,14 @@ INSERT INTO candidato VALUES (89012345678, 'Arthur Felipe Araújo da Silva', NUL
 -- Inserção de dados na tabela Gratificação
 -----------------------------------------------------------------
 
-INSERT INTO "gratificação" VALUES (1, NULL, 50.25);
-INSERT INTO "gratificação" VALUES (2, 'Ajudante de Contratação', 250.00);
-INSERT INTO "gratificação" VALUES (3, NULL, 1000.00);
-INSERT INTO "gratificação" VALUES (4, 'Ajudante de Avaliação', 500.00);
-INSERT INTO "gratificação" VALUES (5, 'Hora Extra', 150.00);
-INSERT INTO "gratificação" VALUES (6, NULL, 5000.00);
-INSERT INTO "gratificação" VALUES (7, NULL, 322.00);
-INSERT INTO "gratificação" VALUES (8, 'Entrevistador', 450.00);
+INSERT INTO gratificacao VALUES (1, NULL, 50.25);
+INSERT INTO gratificacao VALUES (2, 'Ajudante de Contratação', 250.00);
+INSERT INTO gratificacao VALUES (3, NULL, 1000.00);
+INSERT INTO gratificacao VALUES (4, 'Ajudante de Avaliação', 500.00);
+INSERT INTO gratificacao VALUES (5, 'Hora Extra', 150.00);
+INSERT INTO gratificacao VALUES (6, NULL, 5000.00);
+INSERT INTO gratificacao VALUES (7, NULL, 322.00);
+INSERT INTO gratificacao VALUES (8, 'Entrevistador', 450.00);
 
 -----------------------------------------------------------------
 ----------------------------------------------------------------- 
