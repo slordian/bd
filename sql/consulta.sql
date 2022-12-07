@@ -85,3 +85,38 @@ ON (e.id_departamento = d.id_departamento);
 -----------------------------------------------------------------
 -----------------------------------------------------------------
 
+-- Enunciado: Mostre o nome do candidato, o código do projeto de recrutamento em que fez entrevista, a data da mesma, e se foi contratado ou não. Ordene pelo nome do candidato.
+
+SELECT c.nome, 
+    CASE 
+        WHEN p.nome IS NULL THEN 
+            'Sem nome' 
+        ELSE 
+            p.nome 
+    END CASE, 
+pc.data_entrevista, pc.contratação 
+FROM candidato c
+JOIN projeto_candidato pc ON (c.cpf = pc.cpf) 
+JOIN projeto p ON (p.id_projeto = pc.id_projeto) 
+ORDER BY c.nome ASC;
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+-- Enunciado: Mostre o código e o nome do projeto de recrutamento e a quantidade de entrevistas de cada um, caso tenha alguma. Ordene pelo código do projeto.
+
+SELECT p.id_projeto, p.nome, COUNT(pc.data_entrevista)
+FROM projeto p JOIN projeto_candidato pc ON (p.id_projeto = pc.id_projeto)
+GROUP BY p.id_projeto, p.nome
+ORDER BY p.id_projeto;
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+-- Enunciado: Mostre o nome do empregado, seu salário e o departamento em que trabalha.
+
+SELECT e.nome, e.salário, d.nome AS departamento
+FROM empregado e JOIN departamento d ON (e.id_departamento = d.id_departamento);
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
